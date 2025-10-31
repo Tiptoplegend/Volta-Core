@@ -8503,7 +8503,7 @@ Section Title
   color: var(--theme-color-white);
   font-size: 50px;
   font-weight: 500;
-  line-height: 50px;
+  line-height: 20px;
 }
 @media (max-width: 1199.98px) {
   .service-two .card-style .content-left .title {
