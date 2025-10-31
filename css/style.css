@@ -705,7 +705,6 @@ textarea.form-control {
 }
 .tm-boxed-layout .page-wrapper {
   margin: 0 auto;
-  overflow: hidden;
 }
 @media (min-width: 1200px) {
   .tm-boxed-layout .page-wrapper {
@@ -971,12 +970,9 @@ li {
 }
 
 .page-wrapper {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  min-width: 300px;
-  z-index: 99;
-  background-color: var(--body-bg);
+  overflow-x: hidden;
+  overflow-y: auto;
+
 }
 
 .large-container {
