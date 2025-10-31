@@ -259,10 +259,12 @@ var THEMEMASCOT = {};
 		nullTargetWarn: false,
 	});
 	let smoother = ScrollSmoother.create({
-		smooth: 2,
+		wrapper: "#smooth-wrapper",
+		content: "#smooth-content",
+		smooth: 1.5,
 		effects: true,
 		smoothTouch: 0.1,
-		normalizeScroll: false,
+		normalizeScroll: true,
 		ignoreMobileResize: true,
 	});
 
