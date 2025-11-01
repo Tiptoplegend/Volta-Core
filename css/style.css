@@ -8200,7 +8200,8 @@ Section Title
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          /* justify-content: space-between; */
+          gap: 15px;
   margin-bottom: 35px;
 }
 .service-one .card-style .shape-1 {
@@ -8222,7 +8223,7 @@ Section Title
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--theme-color2);
   color: transparent;
-  font-size: 80px;
+  font-size: 40px;
   font-weight: 600;
   letter-spacing: -1.6px;
   line-height: 1;
