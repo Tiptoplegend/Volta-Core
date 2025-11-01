@@ -52,9 +52,9 @@ License: copyright commercial
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
 :root {
-  --theme-color1: #2d1ee2;
+  --theme-color1: #00008B ;
   --theme-color2: #0f0f11;
-  --theme-color3: #b4e019;
+  --theme-color3: #FFDF00;
   --theme-color1-rgb: 45, 30, 226;
   --theme-color2-rgb: 15, 15, 17;
   --theme-color3-rgb: 180, 224, 25;
@@ -8150,6 +8150,7 @@ Section Title
 .service-one {
   position: relative;
 }
+
 .service-one::before {
   background-color: var(--theme-color-light);
   height: 450px;
@@ -8164,6 +8165,7 @@ Section Title
   top: auto;
   z-index: -1;
 }
+
 .service-one .shape-2 {
   bottom: 0;
   left: 0;
@@ -8238,6 +8240,7 @@ Section Title
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+
 .service-one .card-style .list {
   padding-top: 95px;
   padding-bottom: 30px;
@@ -8310,7 +8313,7 @@ Section Title
 .service-one .card-style:hover .num {
   -webkit-text-stroke-color: var(--theme-color-white);
 }
-.service-one .card-style:hover .list li {
+.service-one .card-style:hover .details {
   color: var(--theme-color-white);
 }
 .service-one .card-style:hover .list li i {
