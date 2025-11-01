@@ -670,6 +670,17 @@
 .overflow-y-hidden {
   overflow-y: hidden !important; }
 
+/* Smooth Scroll Wrapper */
+#smooth-wrapper {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+#smooth-content {
+  overflow: visible !important;
+  height: auto !important;
+}
+
 .text-left {
   text-align: left !important; }
 
