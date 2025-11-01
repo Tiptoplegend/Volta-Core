@@ -52,6 +52,7 @@ License: copyright commercial
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
 :root {
+
   --theme-color1: #00008B ;
   --theme-color2: #0f0f11;
   --theme-color3: #FFDF00;
