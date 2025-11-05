@@ -8144,7 +8144,7 @@ Section Title
 /*** 
 
 ====================================================================
-    Services Section
+    Pillars Section
 ====================================================================
 
 ***/
@@ -8186,12 +8186,12 @@ Section Title
   -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
   position: relative;
-  z-index: 3;
+  z-index: 4;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 .service-one .card-style .head {
@@ -8216,11 +8216,11 @@ Section Title
   transition: all 0.2s ease-in-out;
 }
 .service-one .card-style .icon-2 {
-  font-size: 75px;
+  font-size: 70px;
   color: var(--theme-color2);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  line-height: 1;
+  line-height: 2;
 }
 .service-one .card-style .num {
   -webkit-text-stroke-width: 1px;
@@ -8228,7 +8228,7 @@ Section Title
   color: transparent;
   font-size: 40px;
   font-weight: 600;
-  letter-spacing: -1.6px;
+  letter-spacing: -1.1px;
   line-height: 1;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;
@@ -8236,20 +8236,20 @@ Section Title
 }
 .service-one .card-style .title {
   color: var(--theme-color2);
-  line-height: 35px;
-  letter-spacing: -0.6px;
+  line-height: 30px;
+  letter-spacing: -0.4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .service-one .card-style .list {
-  padding-top: 95px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 .service-one .card-style .list li {
   color: var(--theme-color2);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 3px 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
