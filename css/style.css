@@ -8186,12 +8186,12 @@ Section Title
   -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
           box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
   position: relative;
-  z-index: 4;
+  z-index: 3;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 .service-one .card-style .head {
@@ -8216,11 +8216,11 @@ Section Title
   transition: all 0.2s ease-in-out;
 }
 .service-one .card-style .icon-2 {
-  font-size: 70px;
+  font-size: 75px;
   color: var(--theme-color2);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  line-height: 2;
+  line-height: 1;
 }
 .service-one .card-style .num {
   -webkit-text-stroke-width: 1px;
@@ -8228,7 +8228,7 @@ Section Title
   color: transparent;
   font-size: 40px;
   font-weight: 600;
-  letter-spacing: -1.1px;
+  letter-spacing: -1.6px;
   line-height: 1;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;
@@ -8236,20 +8236,20 @@ Section Title
 }
 .service-one .card-style .title {
   color: var(--theme-color2);
-  line-height: 30px;
-  letter-spacing: -0.4px;
+  line-height: 35px;
+  letter-spacing: -0.6px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .service-one .card-style .list {
-  padding-top: 50px;
-  padding-bottom: 10px;
+  padding-top: 95px;
+  padding-bottom: 30px;
 }
 .service-one .card-style .list li {
   color: var(--theme-color2);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 3px 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -8751,7 +8751,7 @@ Section Title
           align-items: center;
   text-align: center;
   background-color: #000;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 @media (max-width: 767.98px) {
   .service-four__single-card {
@@ -8770,7 +8770,7 @@ Section Title
   }
 }
 .service-four__single-card .content .title {
-  line-height: 60px;
+  line-height: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 30px;
 }
@@ -8785,9 +8785,9 @@ Section Title
 }
 .service-four__single-card .content .text {
   color: var(--theme-color-white);
-  padding-top: 20px;
+  padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .service-four__single-card .image-wrap {
   position: relative;
@@ -8803,7 +8803,7 @@ Section Title
 }
 @media (max-width: 767.98px) {
   .service-four__single-card .image-wrap .image {
-    width: 200%;
+    width: 100%;
     height: 480px;
   }
 }
@@ -9180,7 +9180,7 @@ Section Title
   width: 100px;
   height: 100px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(44.69%, #b4e019), to(#5d1ee2));
-  background: linear-gradient(180deg, #b4e019 44.69%, #5d1ee2 100%);
+  background: linear-gradient(180deg, #1973e0 44.69%, #5d1ee2 100%);
   z-index: -1;
   top: 50%;
   left: 50%;
