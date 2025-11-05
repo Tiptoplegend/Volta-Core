@@ -8751,7 +8751,7 @@ Section Title
           align-items: center;
   text-align: center;
   background-color: #000;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 @media (max-width: 767.98px) {
   .service-four__single-card {
@@ -8770,7 +8770,7 @@ Section Title
   }
 }
 .service-four__single-card .content .title {
-  line-height: 40px;
+  line-height: 60px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 30px;
 }
@@ -8785,9 +8785,9 @@ Section Title
 }
 .service-four__single-card .content .text {
   color: var(--theme-color-white);
-  padding-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 .service-four__single-card .image-wrap {
   position: relative;
@@ -8803,7 +8803,7 @@ Section Title
 }
 @media (max-width: 767.98px) {
   .service-four__single-card .image-wrap .image {
-    width: 100%;
+    width: 200%;
     height: 480px;
   }
 }
