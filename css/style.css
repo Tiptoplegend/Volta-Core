@@ -8144,7 +8144,7 @@ Section Title
 /*** 
 
 ====================================================================
-    Services Section
+    Pillars Section
 ====================================================================
 
 ***/
@@ -9180,7 +9180,7 @@ Section Title
   width: 100px;
   height: 100px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(44.69%, #b4e019), to(#5d1ee2));
-  background: linear-gradient(180deg, #b4e019 44.69%, #5d1ee2 100%);
+  background: linear-gradient(180deg, #1973e0 44.69%, #5d1ee2 100%);
   z-index: -1;
   top: 50%;
   left: 50%;
