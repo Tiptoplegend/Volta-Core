@@ -1,4 +1,4 @@
-  (function($) {
+  /*(function($) {
     $("#contact_form").validate({
       submitHandler: function(form) {
         var form_btn = $(form).find('button[type="submit"]');
@@ -15,9 +15,10 @@
             }
             form_btn.prop('disabled', false).html(form_btn_old_msg);
             $(form_result_div).html(data.message).fadeIn('slow');
-            setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+            setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 4000);
           }
         });
       }
     });
   })(jQuery);
+  */
