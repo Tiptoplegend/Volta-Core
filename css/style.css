@@ -15576,6 +15576,18 @@ Project
   text-transform: capitalize;
 }
 
+.help-type-dropdown {
+  width: 100%;
+  max-width: 350px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #fff;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
 .cta-one {
   position: relative;
   margin-top: -380px;

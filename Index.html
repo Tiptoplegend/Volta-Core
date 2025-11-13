@@ -473,8 +473,7 @@
                           <h3 class="title">Core <br />Technology</h3>
                           <ul class="list">
                             <li><i class="far fa-long-arrow-right"></i>Shared Data</li>
-                            <li><i class="far fa-long-arrow-right"></i>Governance</li>
-                            <li><i class="far fa-long-arrow-right"></i>Security</li>
+                            <li><i class="far fa-long-arrow-right"></i>Governance & Security</li>
                           </ul>
                           <div class="icon-box">
                             <span class="icon"><i class="far fa-long-arrow-right"></i></span>
@@ -787,7 +786,7 @@
               </div>
               <div class="col-xl-6 col-lg-6 ks_fade_anim" data-delay=".6">
                 <div class="contact-one__contact-form">
-                  <form action="#" class="form-box">
+                  <form id="contactForm" action="#" class="form-box">
                     <div class="row g-4">
                       <div class="col-md-6">
                         <div class="form-clt">
@@ -796,7 +795,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-clt">
-                          <input type="text" name="name" id="email" placeholder="Email" />
+                          <input type="email" name="email" id="email" placeholder="Email" />
                         </div>
                       </div>
                       <div class="col-md-12">
@@ -804,39 +803,43 @@
                           <input type="text" name="Subject" id="Subject" placeholder="Company Name" />
                         </div>
                       </div>
-   <div class="form-clt">
-  <label for="phone">Phone Number</label>
-  <div style="display: flex; gap: 8px;">
-    <select name="country-code" id="country-code" style="max-width: 100px;">
-      <option value="+233">🇬🇭 +233</option>
-      <option value="+234">🇳🇬 +234</option>
-      <option value="+27">🇿🇦 +27</option>
-      <option value="+44">🇬🇧 +44</option>
-      <option value="+1">🇺🇸 +1</option>
-      <option value="+20">🇪🇬 +20</option>
-      <option value="+225">🇨🇮 +225</option>
-    </select>
-    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
-  </div>
-</div>
-<div class="form-clt">
-  <label for="help-type">How can we help you?</label>
-  <select name="help-type" id="help-type" class="help-type-dropdown">
-    <option value="" disabled selected>Select an option</option>
-    <option value="investment">Investment Inquiry</option>
-    <option value="partnership">Partnership/Acquisition</option>
-    <option value="media">Media/Press</option>
-    <option value="general">General Inquiry</option>
-  </select>
-</div>
-    <div class="col-md-12">
+                      <div class="form-clt">
+                        <label for="phone">Phone Number</label>
+                        <div style="display: flex; gap: 8px;">
+                          <select name="country-code" id="country-code" style="max-width: 100px;" >
+                            <option value="">Code</option>
+                            <option value="+233">🇬🇭 +233</option>
+                            <option value="+234">🇳🇬 +234</option>
+                            <option value="+27">🇿🇦 +27</option>
+                            <option value="+44">🇬🇧 +44</option>
+                            <option value="+1">🇺🇸 +1</option>
+                            <option value="+20">🇪🇬 +20</option>
+                          </select>
+                          <input type="tel" name="phone" id="phone" placeholder="Phone Number" required pattern="^[0-9]{7,15}$" />
+                        </div>
+                      </div>
+                      <div class="form-clt">
+                        <label for="help-type">How can we help you?</label>
+                        <select name="help-type" id="help-type" class="help-type-dropdown" required>
+                          <option value="" disabled selected>Select an option</option>
+                          <option value="investment">Investment Inquiry</option>
+                          <option value="partnership">Partnership/Acquisition</option>
+                          <option value="media">Media/Press</option>
+                          <option value="general">General Inquiry</option>
+                        </select>
+                      </div>
+                      <div class="col-md-12">
                         <div class="form-clt">
-                          <a class="theme-btn-main" href="page-contact.html">
+                          <button type="submit" class="theme-btn-main">
                             <span class="theme-btn-arrow-left"> <i class="far fa-long-arrow-right"></i> </span>
                             <span class="theme-btn">Submit Inquiry</span>
                             <span class="theme-btn-arrow-right"> <i class="far fa-long-arrow-right"></i> </span>
-                          </a>
+                          </button>
                         </div>
+                      </div>
+                      <div id="successMessage" style="display:none; margin-top:20px; color:green; text-align:center;">
+                        <i class="fa fa-check-circle" style="color:green; font-size:2em;"></i>
+                        <span>Inquiry submitted successfully!</span>
                       </div>
                     </div>
                   </form>
@@ -1041,6 +1044,83 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.form.min.js"></script>
   <script src="js/contact-form-script.js"></script>
+  <script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+
+  // Get inputs
+  var nameInput = document.getElementById('name');
+  var emailInput = document.getElementById('email');
+  var companyInput = document.getElementById('Subject');
+  var countryCode = document.getElementById('country-code').value;
+  var phoneInput = document.getElementById('phone');
+
+  // Trim values
+  nameInput.value = nameInput.value.trim();
+  emailInput.value = emailInput.value.trim();
+  companyInput.value = companyInput.value.trim();
+  phoneInput.value = phoneInput.value.trim();
+
+  // Reset borders
+  nameInput.style.borderColor = '';
+  emailInput.style.borderColor = '';
+  companyInput.style.borderColor = '';
+  phoneInput.style.borderColor = '';
+
+  var valid = true;
+
+  // Name validation
+  if (nameInput.value === '') {
+    nameInput.style.borderColor = 'red';
+    valid = false;
+  }
+
+  // Email validation (simple regex)
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput.value)) {
+    emailInput.style.borderColor = 'red';
+    valid = false;
+  }
+
+  // Company name validation
+  if (companyInput.value === '') {
+    companyInput.style.borderColor = 'red';
+    valid = false;
+  }
+
+  // Country code and phone validation
+  var patterns = {
+    '+233': /^0?[2-9]\d{8}$/, // Ghana
+    '+234': /^0?[7-9]\d{9}$/, // Nigeria
+    '+27': /^0?[6-8]\d{8}$/,  // South Africa
+    '+44': /^0?7\d{9}$/,      // UK
+    '+1': /^\d{10}$/,         // USA
+    '+20': /^0?1[0-2,5]\d{8}$/ // Egypt
+  };
+  if (patterns[countryCode]) {
+    if (!patterns[countryCode].test(phoneInput.value)) {
+      phoneInput.style.borderColor = 'red';
+      valid = false;
+      alert('Please enter a valid phone number for the selected country code.');
+    }
+  }
+
+  if (valid) {
+    document.getElementById('successMessage').style.display = 'block';
+    form.reset();
+    setTimeout(function() {
+      document.getElementById('successMessage').style.display = 'none';
+      nameInput.style.borderColor = '';
+      emailInput.style.borderColor = '';
+      companyInput.style.borderColor = '';
+      phoneInput.style.borderColor = '';
+    }, 4000);
+  } else {
+    form.reportValidity();
+  }
+});
+</script>
 </body>
 
 
