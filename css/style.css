@@ -8181,6 +8181,7 @@ Section Title
   position: relative;
 }
 .service-one .card-style {
+  height: 400px;
   padding: 50px 40px 50px 50px;
   background-color: var(--theme-color-white);
   -webkit-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
@@ -8193,6 +8194,7 @@ Section Title
   overflow: hidden;
   margin-top: 30px;
   margin-bottom: 30px;
+  
 }
 .service-one .card-style .head {
   display: -webkit-box;
@@ -8243,7 +8245,7 @@ Section Title
 }
 
 .service-one .card-style .list {
-  padding-top: 95px;
+  padding-top: 50px;
   padding-bottom: 30px;
 }
 .service-one .card-style .list li {
@@ -8308,7 +8310,7 @@ Section Title
 .service-one .card-style:hover .title {
   color: var(--theme-color-white);
 }
-.service-one .card-style:hover .icon-2 {
+.service-one .card-style:hover .icon-2  {
   color: var(--theme-color-white);
 }
 .service-one .card-style:hover .num {
@@ -8321,6 +8323,9 @@ Section Title
   color: var(--theme-color3);
   margin-right: 10px;
   rotate: -30deg;
+}
+.service-one .card-style:hover .list li {
+  color: var(--theme-color-white);
 }
 .service-one .card-style:hover .icon-box .icon {
   opacity: 0;
