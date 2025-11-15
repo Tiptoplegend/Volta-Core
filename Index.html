@@ -82,14 +82,12 @@
                 <nav class="nav main-menu">
                   <ul class="navigation onepage-nav">
                     <li class="current"><a href="#home">Home</a></li>
-
                     <li><a href="#about">About</a></li>
                     <li><a href="#pillars">Pillars</a></li>
                     <li><a href="#Whyus">Why Us</a></li>
                     <li><a href="#team">Team</a></li>
                     </li>
                     <li><a href="#contact">Contact</a></li>
-
                   </ul>
                 </nav>
                 <!-- Main Menu End-->
@@ -917,26 +915,8 @@
                   <div class="right">
                     <div class="icon"><i class="fa-regular fa-envelope"></i></div>
                     <h3 class="email"><a href="https://html.kodesolution.com/cdn-cgi/l/email-protection"
-                        class="__cf_email__" data-cfemail="0a43646c654a6d676b636624696567">[email&#160;protected]</a>
+                        class="__cf_email__" data-cfemail="0a43646c654a6d676b636624696567">hello@voltacoregroup.com</a>
                     </h3>
-                    <div class="circle-box">
-                      <div class="highlight-arc"></div>
-                      <div class="circle-text">
-                        <svg viewBox="0 0 250 250">
-                          <defs>
-                            <path id="circlePath" d="M125,125 m-95,0 a95,95 0 1,1 190,0 a95,95 0 1,1 -190,0" />
-                          </defs>
-                          <text>
-                            <textPath xlink:href=" #circlePath" startOffset="0%">
-                              • Contact • Contact • Contact • Contact
-                            </textPath>
-                          </text>
-                        </svg>
-                      </div>
-                      <a href="page-contact.html" class="icon-2">
-                        <i class="far fa-long-arrow-right"></i>
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -945,10 +925,8 @@
               <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6  ks_fade_anim" data-delay=".4">
                   <div class="footer-one__logo style-1 me-xl-5">
-                    <div class="logo mb-4">
-                      <img src="images/white-logo.png" alt="" />
-                    </div>
-                    <p>There are many variations of Lorem Ipsum available,There are many variations</p>
+                    <h3>Volta Core</h1><br>
+                    <p>A Ghanaian-led holding company investing in the core sectors of transformation: Fintech, Logistics, and AgriTech</p>
                   </div>
                 </div>
                 <div class="col-xl-2 col-lg-2 offset-lg-0 offset-sm-1 col-md-3 col-sm-5  ks_fade_anim" data-delay=".5">
@@ -957,15 +935,15 @@
                       <h5 class="title">Company</h5>
                     </div>
                     <ul class="usefull-link">
-                      <li><a href="page-about.html">About Us</a></li>
-                      <li><a href="page-about.html">Our Mission</a></li>
-                      <li><a href="news-grid.html">Our Blogs</a></li>
-                      <li><a href="page-contact.html">Help Center</a></li>
-                      <li><a href="page-contact.html">Contact Us </a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#pillars">Pillars</a></li>
+                      <li><a href="#Whyus">Why Us</a></li>
+                      <li><a href="#team">Team</a></li>
+                      <li><a href="#contact">Contact</a></li>
                     </ul>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 ks_fade_anim" data-delay=".6">
+                <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 ks_fade_anim" data-delay=".6">
                   <div class="footer-widget">
                     <div class="widget-title mb-3">
                       <h5 class="title">Company</h5>
@@ -977,7 +955,7 @@
                       <li><a href="page-project-details.html">Ecommerce Development</a></li>
                     </ul>
                   </div>
-                </div>
+                </div> -->
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 ks_fade_anim" data-delay=".7">
                   <div class="footer-widget newsletter">
                     <div class="widget-title mb-3">
@@ -1120,8 +1098,53 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     form.reportValidity();
   }
 });
-</script>
-</body>
+  </script>
+  <script>
+  (function(){
+    function scrollToHash(hash){
+      var target = document.querySelector(hash);
+      if(!target) return;
+      var top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
 
+      // Prefer ScrollSmoother if available
+      try {
+        if (window.ScrollSmoother && typeof ScrollSmoother.scrollTo === 'function') {
+          ScrollSmoother.scrollTo(hash);
+          return;
+        }
+      } catch(e){}
 
+      // Use GSAP scrollTo plugin if available
+      try {
+        if (window.gsap && gsap && gsap.plugins && gsap.plugins.scrollTo) {
+          gsap.to(window, { duration: 1, ease: "power2.out", scrollTo: top });
+          return;
+        }
+      } catch(e){}
+
+      // Fallback to native smooth
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(function(link){
+      link.addEventListener('click', function(e){
+        var href = this.getAttribute('href');
+        if (!href || href === '#' ) return;
+        if (href.charAt(0) === '#') {
+          e.preventDefault();
+          scrollToHash(href);
+          if (history.replaceState) history.replaceState(null, null, href);
+        }
+      });
+    });
+
+    // If page loads with a hash, scroll to it
+    window.addEventListener('load', function(){
+      if (location.hash) {
+        setTimeout(function(){ scrollToHash(location.hash); }, 50);
+      }
+    });
+  })();
+  </script>
+  </body>
 </html>
