@@ -131,7 +131,7 @@
               <div class="contact-info-box">
                 <i class="icon lnr-icon-phone-handset"></i>
                 <span class="title">Call Now</span>
-                <a href="tel:02209140308">+233 209140308</a>
+                <a href="tel:0209140308">+233 209140308</a>
               </div>
             </li>
             <li>
@@ -139,9 +139,9 @@
               <div class="contact-info-box">
                 <span class="icon lnr-icon-envelope1"></span>
                 <span class="title">Send Email</span>
-                <a href="https://html.kodesolution.com/cdn-cgi/l/email-protection#741c11180434171b1904151a0d5a171b19"><span
+                <a href="mailto: hello@voltacore.com"><span
                     class="__cf_email__"
-                    data-cfemail="c7afa2abb787a4a8aab7a6a9bee9a4a8aa">[email&#160;protected]</span></a>
+                    data-cfemail="c7afa2abb787a4a8aab7a6a9bee9a4a8aa">hello@voltacore.com</span></a>
               </div>
             </li>
             <li>
@@ -256,7 +256,7 @@
                   <p class="text">A Ghanaian-led holding company investing in the core sectors of
                     transformation: Fintech, Logistics, and AgriTech</p>
                   <div class="infu-box ks_fade_anim" data-delay=".7" data-fade-from="right">
-                    <a class="theme-btn-main mt-5" href="page-about.html">
+                    <a class="theme-btn-main mt-5" href="#contact">
                       <span class="theme-btn-arrow-left"> <i class="far fa-long-arrow-right"></i> </span>
                       <span class="theme-btn">Partner With Us</span>
                       <span class="theme-btn-arrow-right"> <i class="far fa-long-arrow-right"></i> </span>
@@ -751,7 +751,7 @@
               </div>
               <div class="col-xl-6 col-lg-6 ks_fade_anim" data-delay=".6">
                 <div class="contact-one__contact-form">
-                  <form id="contactForm" action="https://formspree.io/f/xovylwqy" method="POST" class="form-box">
+                  <!-- <form id="contactForm" action="https://formspree.io/f/mgvrzbvj" method="POST" class="form-box">
                     <div class="row g-4">
                       <div class="col-md-6">
                         <div class="form-clt">
@@ -808,8 +808,80 @@
                         <span>Inquiry submitted successfully!</span>
                       </div>
                     </div>
+                  </form> -->
+                  <form id="contactForm" action="https://formspree.io/f/mgvrzbvj" method="POST" class="form-box">
+                    <!-- ==== HIDDEN FIELDS ==== -->
+                    <input type="hidden" name="_subject" value="New Volta Core Inquiry">
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                  
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <div class="form-clt">
+                          <input type="text" name="name" id="name" placeholder="Full Name" required>
+                        </div>
+                      </div>
+                  
+                      <div class="col-md-6">
+                        <div class="form-clt">
+                          <input type="email" name="_replyto" id="email" placeholder="Email" required>
+                        </div>
+                      </div>
+                  
+                      <div class="col-md-12">
+                        <div class="form-clt">
+                          <input type="text" name="company" id="Subject" placeholder="Company Name" required>
+                        </div>
+                      </div>
+                  
+                      <div class="form-clt">
+                        <label>Phone Number</label>
+                        <div style="display:flex;gap:8px;">
+                          <select name="country-code" id="country-code" style="max-width:100px;">
+                            <option value="+233" selected>GH +233</option>
+                            <option value="+234">NG +234</option>
+                            <option value="+27">ZA +27</option>
+                            <option value="+44">UK +44</option>
+                            <option value="+1">US +1</option>
+                            <option value="+20">EG +20</option>
+                          </select>
+                          <input type="tel" name="phone" id="phone" placeholder="phone number" required>
+                        </div>
+                      </div>
+                  
+                      <div class="form-clt">
+                        <label for="help-type">How can we help you?</label>
+                        <select name="help-type" id="help-type" class="help-type-dropdown" required>
+                          <option value="" disabled selected>Select an option</option>
+                          <option value="investment">Investment Inquiry</option>
+                          <option value="partnership">Partnership/Acquisition</option>
+                          <option value="media">Media/Press</option>
+                          <option value="general">General Inquiry</option>
+                        </select>
+                      </div>
+                  
+                      <div class="col-md-12">
+                        <div class="form-clt">
+                          <button type="submit" class="theme-btn-main">
+                            <span class="theme-btn-arrow-left"><i class="far fa-long-arrow-right"></i></span>
+                            <span class="theme-btn">Submit Inquiry</span>
+                            <span class="theme-btn-arrow-right"><i class="far fa-long-arrow-right"></i></span>
+                          </button>
+                        </div>
+                      </div>
+                  
+                      <!-- ==== MESSAGES ==== -->
+                      <div id="successMessage" style="display:none;margin-top:20px;color:green;text-align:center;">
+                        <i class="fa fa-check-circle" style="font-size:1.8em;margin-right:8px;"></i>
+                        <span>Thank you! We received your message and will reply soon.</span>
+                      </div>
+                      <div id="errorMessage" style="display:none;margin-top:20px;color:red;text-align:center;">
+                        <span>Oops! Something went wrong. Please try again or email us directly.</span>
+                      </div>
+                    </div>
                   </form>
                 </div>
+
+
               </div>
             </div>
           </div>
@@ -979,129 +1051,126 @@
   <script src="js/jquery.form.min.js"></script>
   <script src="js/contact-form-script.js"></script>
   <script>
+    /* --------------------------------------------------------------
+       1. FORM VALIDATION + AJAX SUBMISSION TO FORMSPREE
+       -------------------------------------------------------------- */
     document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var form = e.target;
-
-      // Get inputs
-      var nameInput = document.getElementById('name');
-      var emailInput = document.getElementById('email');
-      var companyInput = document.getElementById('Subject');
-      var countryCode = document.getElementById('country-code').value;
-      var phoneInput = document.getElementById('phone');
-
-      // Trim values
-      nameInput.value = nameInput.value.trim();
-      emailInput.value = emailInput.value.trim();
+      e.preventDefault();                     // always use AJAX
+      const form = e.target;
+    
+      // ---- Grab & trim values -------------------------------------------------
+      const nameInput   = document.getElementById('name');
+      const emailInput  = document.getElementById('email');
+      const companyInput= document.getElementById('Subject');
+      const countryCode = document.getElementById('country-code').value;
+      const phoneInput  = document.getElementById('phone');
+      const helpSelect  = document.getElementById('help-type');
+    
+      nameInput.value    = nameInput.value.trim();
+      emailInput.value   = emailInput.value.trim();
       companyInput.value = companyInput.value.trim();
-      phoneInput.value = phoneInput.value.trim();
-
-      // Reset borders
-      nameInput.style.borderColor = '';
-      emailInput.style.borderColor = '';
-      companyInput.style.borderColor = '';
-      phoneInput.style.borderColor = '';
-
-      var valid = true;
-
-      // Name validation
-      if (nameInput.value === '') {
-        nameInput.style.borderColor = 'red';
-        valid = false;
-      }
-
-      // Email validation (simple regex)
-      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(emailInput.value)) {
-        emailInput.style.borderColor = 'red';
-        valid = false;
-      }
-
-      // Company name validation
-      if (companyInput.value === '') {
-        companyInput.style.borderColor = 'red';
-        valid = false;
-      }
-
-      // Country code and phone validation
-      var patterns = {
-        '+233': /^0?[2-9]\d{8}$/, // Ghana
-        '+234': /^0?[7-9]\d{9}$/, // Nigeria
-        '+27': /^0?[6-8]\d{8}$/,  // South Africa
-        '+44': /^0?7\d{9}$/,      // UK
-        '+1': /^\d{10}$/,         // USA
-        '+20': /^0?1[0-2,5]\d{8}$/ // Egypt
+      phoneInput.value   = phoneInput.value.trim();
+    
+      // ---- Reset borders -------------------------------------------------------
+      [nameInput, emailInput, companyInput, phoneInput, helpSelect].forEach(el => el.style.borderColor = '');
+    
+      // ---- Hide previous messages ------------------------------------------------
+      document.getElementById('successMessage').style.display = 'none';
+      document.getElementById('errorMessage').style.display   = 'none';
+    
+      let valid = true;
+    
+      // ---- Basic required checks ------------------------------------------------
+      if (!nameInput.value)    { nameInput.style.borderColor = 'red';    valid = false; }
+      if (!emailInput.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value))
+                               { emailInput.style.borderColor = 'red';   valid = false; }
+      if (!companyInput.value) { companyInput.style.borderColor = 'red'; valid = false; }
+      if (!phoneInput.value)   { phoneInput.style.borderColor = 'red';   valid = false; }
+      if (!helpSelect.value)   { helpSelect.style.borderColor = 'red';   valid = false; }
+    
+      // ---- Phone number per country --------------------------------------------
+      const patterns = {
+        '+233': /^0?[2-9]\d{8}$/,    // Ghana
+        '+234': /^0?[7-9]\d{9}$/,    // Nigeria
+        '+27':  /^0?[6-8]\d{8}$/,    // South Africa
+        '+44':  /^0?7\d{9}$/,        // UK
+        '+1':   /^\d{10}$/,          // USA
+        '+20':  /^0?1[0-2,5]\d{8}$/  // Egypt
       };
-      if (patterns[countryCode]) {
-        if (!patterns[countryCode].test(phoneInput.value)) {
-          phoneInput.style.borderColor = 'red';
-          valid = false;
-          alert('Please enter a valid phone number for the selected country code.');
-        }
+      if (countryCode && patterns[countryCode] && !patterns[countryCode].test(phoneInput.value)) {
+        phoneInput.style.borderColor = 'red';
+        alert('Please enter a valid phone number for the selected country.');
+        valid = false;
       }
-
-      if (valid) {
+ 
+      if (!valid) {
+        form.reportValidity && form.reportValidity();
+        return;
+      }
+  
+      const formData = new FormData(form);
+    
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(r => {
+        if (r.ok) return r.json();
+        throw new Error('Server responded with ' + r.status);
+      })
+      .then(() => {
         document.getElementById('successMessage').style.display = 'block';
         form.reset();
-        setTimeout(function () {
-          document.getElementById('successMessage').style.display = 'none';
-          nameInput.style.borderColor = '';
-          emailInput.style.borderColor = '';
-          companyInput.style.borderColor = '';
-          phoneInput.style.borderColor = '';
-        }, 4000);
-      } else {
-        form.reportValidity();
-      }
+        setTimeout(() => document.getElementById('successMessage').style.display = 'none', 6000);
+      })
+      .catch(() => {
+        document.getElementById('errorMessage').style.display = 'block';
+        setTimeout(() => document.getElementById('errorMessage').style.display = 'none', 6000);
+      });
     });
-  </script>
-  <script>
+    
+    /* --------------------------------------------------------------
+       2. SMOOTH SCROLL FOR ALL # LINKS (works with ScrollSmoother)
+       -------------------------------------------------------------- */
     (function () {
       function scrollToHash(hash) {
-        var target = document.querySelector(hash);
+        const target = document.querySelector(hash);
         if (!target) return;
-        var top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop);
+    
 
-        // Prefer ScrollSmoother if available
-        try {
-          if (window.ScrollSmoother && typeof ScrollSmoother.scrollTo === 'function') {
-            ScrollSmoother.scrollTo(hash);
-            return;
-          }
-        } catch (e) { }
-
-        // Use GSAP scrollTo plugin if available
-        try {
-          if (window.gsap && gsap && gsap.plugins && gsap.plugins.scrollTo) {
-            gsap.to(window, { duration: 1, ease: "power2.out", scrollTo: top });
-            return;
-          }
-        } catch (e) { }
-
-        // Fallback to native smooth
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        if (window.ScrollSmoother && typeof ScrollSmoother.get === 'function') {
+          ScrollSmoother.get().scrollTo(target, true, 'top top');
+          return;
+        }
+    
+      
+        if (window.gsap && gsap.plugins && gsap.plugins.scrollTo) {
+          gsap.to(window, { duration: 1, scrollTo: target, ease: 'power2.out' });
+          return;
+        }
+ 
+        target.scrollIntoView({ behavior: 'smooth' });
       }
+    
 
-      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-          var href = this.getAttribute('href');
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+          const href = link.getAttribute('href');
           if (!href || href === '#') return;
-          if (href.charAt(0) === '#') {
-            e.preventDefault();
-            scrollToHash(href);
-            if (history.replaceState) history.replaceState(null, null, href);
-          }
+          e.preventDefault();
+          scrollToHash(href);
+          if (history.replaceState) history.replaceState(null, null, href);
         });
       });
+    
 
-      // If page loads with a hash, scroll to it
-      window.addEventListener('load', function () {
-        if (location.hash) {
-          setTimeout(function () { scrollToHash(location.hash); }, 50);
-        }
+      window.addEventListener('load', () => {
+        if (location.hash) setTimeout(() => scrollToHash(location.hash), 50);
       });
     })();
-  </script>
+    </script>
 </body>
 
 </html>
