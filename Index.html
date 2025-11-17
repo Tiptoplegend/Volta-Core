@@ -81,12 +81,15 @@
               <div class="outer-box">
                 <nav class="nav main-menu">
                   <ul class="navigation onepage-nav">
-                  <li class="current"><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#pillars">Pillars</a></li>
-                  <li><a href="#Whyus">Why Us</a></li>
-                  <li><a href="#team">Team</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                    <li class="current"><a href="#home">Home</a></li>
+
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#pillars">Pillars</a></li>
+                    <li><a href="#Whyus">Why Us</a></li>
+                    <li><a href="#team">Team</a></li>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+
                   </ul>
                 </nav>
                 <!-- Main Menu End-->
@@ -284,12 +287,9 @@
                   <h2 class="title text_invert"> Our Core Vision & Mission </h2>
                 </div>
               </div>
-              <!-- <div class="offset-xxl-1 col-xl-2">
-                <div class="shape">
-                  <img class="shape-1" src="images/home-1/about/shape-01.png" alt="" />
-                </div>
-              </div> -->
             </div>
+
+            <!-- About text with Read more collapse -->
             <div class="row">
               <div class="col-xl-4 col-lg-4 col-md-12">
                 <div class="about-image ks_fade_anim" data-delay=".3" data-fade-from="left">
@@ -298,31 +298,27 @@
 
               </div>
               <div class="offset-xl-1 col-xl-7 col-lg-8 col-md-12">
-                <div class="about-content ks_fade_anim" data-delay=".3" data-fade-from="right"> 
-                  <div>
-                    <h3 style="color: black;" >The Services</h3>
-                    <p>Our Stucture is built for synergy, creating a closed-loop ecosystem</p>
-                  </div>            
-                  <br>
+                <div class="about-content ks_fade_anim" data-delay=".3" data-fade-from="right">
                   <div class="list">
                     <ul>
-                      <li><i class="fa-solid fa-circle-check"></i>Fintech services (payments, loans) fuel all other
-                        business transactions.</li>
-                      <li><i class="fa-solid fa-circle-check"></i> Logistics & Transport handle the movement of
-                        agricultural goods and fulfillment for e-commerce powered by Fintech.</li>
-                      <li><i class="fa-solid fa-circle-check"></i>AgriTech benefits from supply chain financing
-                        (Fintech) and efficient cold-chain delivery
-                        (Logistics).</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Creativity Meets Strategy</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Innovative Development</li>
+                    </ul>
+                    <ul>
+                      <li><i class="fa-solid fa-circle-check"></i>Design. Develop. Deliver</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unleashing Digital Power.</li>
                     </ul>
                   </div>
-                  <p>This closed-loop system creates powerful barriers to entry for competitors who operate in only</p>
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long
+                    established fact that a reader</p>
                 </div>
 
                 <!-- Mission and Vision cards -->
                 <div class="row">
                   <div class="col-md-6">
                     <div class="service-one">
-                      <div class="card-style" style="height: 500px;">
+                      <div class="card-style">
                         <img class="shape-1" src="images/home-1/service/shape-01.png" alt="" />
                         <div class="head">
                           <div class="icon-2">
@@ -331,16 +327,14 @@
                           <div class="num">01</div>
                         </div>
                         <h3 class="title"> Mission</h3>
-                        <p class="details">Identify, invest in, and grow leading companies in Fintech, Logistics,
-                          Transport, and Agriculture through strategic guidance, financial strength, and advanced
-                          technology delivering sustained, high-impact value for all stakeholders. </p>
+                        <p class="details">Identify, invest in, and grow leading companies in Fintech, Logistics, Transport, and Agriculture through strategic guidance, financial strength, and advanced technology delivering sustained, high-impact value for all stakeholders. </p>
                       </div>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="service-one">
-                      <div class="card-style" style="height: 500px;">
+                      <div class="card-style">
                         <img class="shape-1" src="images/home-1/service/shape-01.png" alt="" />
                         <div class="head">
                           <div class="icon-2">
@@ -349,9 +343,8 @@
                           <div class="num">02</div>
                         </div>
                         <h3 class="title"> Vision</h3>
-                        <p class="details">To be the premier engine of innovation and sustainable economic growth in
-                          Ghana,
-                          recognized as the most valuable and indispensable holding company powering the transition to
+                        <p class="details">To be the premier engine of innovation and sustainable economic growth in Ghana, 
+                          recognized as the most valuable and indispensable holding company powering the transition to 
                           a digitally-integrated African economy. </p>
                       </div>
                     </div>
@@ -1050,126 +1043,83 @@
   <script src="js/jquery.form.min.js"></script>
   <script src="js/contact-form-script.js"></script>
   <script>
-    /* --------------------------------------------------------------
-       1. FORM VALIDATION + AJAX SUBMISSION TO FORMSPREE
-       -------------------------------------------------------------- */
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();                     // always use AJAX
-      const form = e.target;
-    
-      // ---- Grab & trim values -------------------------------------------------
-      const nameInput   = document.getElementById('name');
-      const emailInput  = document.getElementById('email');
-      const companyInput= document.getElementById('Subject');
-      const countryCode = document.getElementById('country-code').value;
-      const phoneInput  = document.getElementById('phone');
-      const helpSelect  = document.getElementById('help-type');
-    
-      nameInput.value    = nameInput.value.trim();
-      emailInput.value   = emailInput.value.trim();
-      companyInput.value = companyInput.value.trim();
-      phoneInput.value   = phoneInput.value.trim();
-    
-      // ---- Reset borders -------------------------------------------------------
-      [nameInput, emailInput, companyInput, phoneInput, helpSelect].forEach(el => el.style.borderColor = '');
-    
-      // ---- Hide previous messages ------------------------------------------------
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+
+  // Get inputs
+  var nameInput = document.getElementById('name');
+  var emailInput = document.getElementById('email');
+  var companyInput = document.getElementById('Subject');
+  var countryCode = document.getElementById('country-code').value;
+  var phoneInput = document.getElementById('phone');
+
+  // Trim values
+  nameInput.value = nameInput.value.trim();
+  emailInput.value = emailInput.value.trim();
+  companyInput.value = companyInput.value.trim();
+  phoneInput.value = phoneInput.value.trim();
+
+  // Reset borders
+  nameInput.style.borderColor = '';
+  emailInput.style.borderColor = '';
+  companyInput.style.borderColor = '';
+  phoneInput.style.borderColor = '';
+
+  var valid = true;
+
+  // Name validation
+  if (nameInput.value === '') {
+    nameInput.style.borderColor = 'red';
+    valid = false;
+  }
+
+  // Email validation (simple regex)
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput.value)) {
+    emailInput.style.borderColor = 'red';
+    valid = false;
+  }
+
+  // Company name validation
+  if (companyInput.value === '') {
+    companyInput.style.borderColor = 'red';
+    valid = false;
+  }
+
+  // Country code and phone validation
+  var patterns = {
+    '+233': /^0?[2-9]\d{8}$/, // Ghana
+    '+234': /^0?[7-9]\d{9}$/, // Nigeria
+    '+27': /^0?[6-8]\d{8}$/,  // South Africa
+    '+44': /^0?7\d{9}$/,      // UK
+    '+1': /^\d{10}$/,         // USA
+    '+20': /^0?1[0-2,5]\d{8}$/ // Egypt
+  };
+  if (patterns[countryCode]) {
+    if (!patterns[countryCode].test(phoneInput.value)) {
+      phoneInput.style.borderColor = 'red';
+      valid = false;
+      alert('Please enter a valid phone number for the selected country code.');
+    }
+  }
+
+  if (valid) {
+    document.getElementById('successMessage').style.display = 'block';
+    form.reset();
+    setTimeout(function() {
       document.getElementById('successMessage').style.display = 'none';
-      document.getElementById('errorMessage').style.display   = 'none';
-    
-      let valid = true;
-    
-      // ---- Basic required checks ------------------------------------------------
-      if (!nameInput.value)    { nameInput.style.borderColor = 'red';    valid = false; }
-      if (!emailInput.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value))
-                               { emailInput.style.borderColor = 'red';   valid = false; }
-      if (!companyInput.value) { companyInput.style.borderColor = 'red'; valid = false; }
-      if (!phoneInput.value)   { phoneInput.style.borderColor = 'red';   valid = false; }
-      if (!helpSelect.value)   { helpSelect.style.borderColor = 'red';   valid = false; }
-    
-      // ---- Phone number per country --------------------------------------------
-      const patterns = {
-        '+233': /^0?[2-9]\d{8}$/,    // Ghana
-        '+234': /^0?[7-9]\d{9}$/,    // Nigeria
-        '+27':  /^0?[6-8]\d{8}$/,    // South Africa
-        '+44':  /^0?7\d{9}$/,        // UK
-        '+1':   /^\d{10}$/,          // USA
-        '+20':  /^0?1[0-2,5]\d{8}$/  // Egypt
-      };
-      if (countryCode && patterns[countryCode] && !patterns[countryCode].test(phoneInput.value)) {
-        phoneInput.style.borderColor = 'red';
-        alert('Please enter a valid phone number for the selected country.');
-        valid = false;
-      }
- 
-      if (!valid) {
-        form.reportValidity && form.reportValidity();
-        return;
-      }
-  
-      const formData = new FormData(form);
-    
-      
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(r => {
-        if (r.ok) return r.json();
-        throw new Error('Server responded with ' + r.status);
-      })
-      .then(() => {
-        document.getElementById('successMessage').style.display = 'block';
-        form.reset();
-        setTimeout(() => document.getElementById('successMessage').style.display = 'none', 6000);
-      })
-      .catch(() => {
-        document.getElementById('errorMessage').style.display = 'block';
-        setTimeout(() => document.getElementById('errorMessage').style.display = 'none', 6000);
-      });
-    });
-    
-    /* --------------------------------------------------------------
-       2. SMOOTH SCROLL FOR ALL # LINKS (works with ScrollSmoother)
-       -------------------------------------------------------------- */
-    (function () {
-      function scrollToHash(hash) {
-        const target = document.querySelector(hash);
-        if (!target) return;
-    
-
-        if (window.ScrollSmoother && typeof ScrollSmoother.get === 'function') {
-          ScrollSmoother.get().scrollTo(target, true, 'top top');
-          return;
-        }
-    
-      
-        if (window.gsap && gsap.plugins && gsap.plugins.scrollTo) {
-          gsap.to(window, { duration: 1, scrollTo: target, ease: 'power2.out' });
-          return;
-        }
- 
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    
-
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', e => {
-          const href = link.getAttribute('href');
-          if (!href || href === '#') return;
-          e.preventDefault();
-          scrollToHash(href);
-          if (history.replaceState) history.replaceState(null, null, href);
-        });
-      });
-    
-
-      window.addEventListener('load', () => {
-        if (location.hash) setTimeout(() => scrollToHash(location.hash), 50);
-      });
-    })();
-    </script>
+      nameInput.style.borderColor = '';
+      emailInput.style.borderColor = '';
+      companyInput.style.borderColor = '';
+      phoneInput.style.borderColor = '';
+    }, 4000);
+  } else {
+    form.reportValidity();
+  }
+});
+</script>
 </body>
+
 
 </html>
