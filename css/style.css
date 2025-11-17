@@ -3689,22 +3689,20 @@ Scroll To Top style
   right: 0;
   top: 0;
   width: 300px;
-  max-width: 100%;
+  max-width: 85%;
   height: 100%;
   opacity: 0;
   visibility: hidden;
   z-index: 999999;
 }
+@media (max-width: 575.98px) {
+  .mobile-menu {
+    width: 280px;
+    max-width: 80%;
+  }
+}
 .mobile-menu .menu-backdrop {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 .mobile-menu .upper-box {
   position: relative;
@@ -3780,10 +3778,7 @@ Scroll To Top style
   visibility: visible;
 }
 .mobile-menu-visible .mobile-menu .menu-backdrop {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  display: none;
 }
 .mobile-menu-visible .mobile-menu .menu-box {
   opacity: 1;
