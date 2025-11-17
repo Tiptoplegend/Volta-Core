@@ -131,6 +131,14 @@ var THEMEMASCOT = {};
 			$('body').removeClass('mobile-menu-visible');
 		});
 
+		// Close mobile menu when navigation links are clicked
+		$('.mobile-menu .navigation a').on('click', function () {
+			// Small delay to allow smooth scroll animation
+			setTimeout(function() {
+				$('body').removeClass('mobile-menu-visible');
+			}, 300);
+		});
+
 	}
 
 
