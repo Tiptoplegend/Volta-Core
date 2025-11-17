@@ -3773,6 +3773,9 @@ Scroll To Top style
 .mobile-menu-visible {
   overflow: hidden;
 }
+.mobile-menu-visible body {
+  overflow: hidden;
+}
 .mobile-menu-visible .mobile-menu {
   opacity: 1;
   visibility: visible;
