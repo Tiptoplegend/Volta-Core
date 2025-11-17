@@ -291,68 +291,76 @@
 
             <!-- About text with Read more collapse -->
             <div class="row">
-              <div class="col-xl-4 col-lg-4 col-md-12">
-                <div class="about-image ks_fade_anim" data-delay=".3" data-fade-from="left">
-                  <img src="images/home-1/about/about-image-01.jpg" alt="" />
-                </div>
+              <div class="col-12">
+                <div class="about-content">
+                  <p id="aboutPreview">
+                    Volta Core is a Ghana-based parent company with operational interests in fintech, agritech, supply chain, and logistics. We provide strategic leadership, capital, and technological expertise to a portfolio of subsidiaries that deliver high-performance solutions across these key sectors.
+                  </p>
 
-              </div>
-              <div class="offset-xl-1 col-xl-7 col-lg-8 col-md-12">
-                <div class="about-content ks_fade_anim" data-delay=".3" data-fade-from="right">
-                  <div class="list">
+                  <div id="aboutFull" class="collapse">
+                    <p>
+                      Our mandate is to develop and oversee businesses that enhance efficiency, promote innovation, and support economic growth within Africa. Through a disciplined approach to governance and execution, Volta Core ensures operational excellence, financial sustainability, and long-term value creation.
+                    </p>
+
+                    <p>We focus on:</p>
                     <ul>
-                      <li><i class="fa-solid fa-circle-check"></i>Creativity Meets Strategy</li>
-                      <li><i class="fa-solid fa-circle-check"></i>Innovative Development</li>
+                      <li><strong>Fintech:</strong> Digital financial systems that enhance access and inclusion.</li>
+                      <li><strong>Agritech:</strong> Technology-enabled solutions that improve productivity and resilience in agriculture.</li>
+                      <li><strong>Supply Chain:</strong> Integrated platforms that increase transparency and efficiency across value chains.</li>
+                      <li><strong>Logistics:</strong> Reliable, scalable logistics capabilities designed for regional and cross-border operations.</li>
                     </ul>
-                    <ul>
-                      <li><i class="fa-solid fa-circle-check"></i>Design. Develop. Deliver</li>
-                      <li><i class="fa-solid fa-circle-check"></i>Unleashing Digital Power.</li>
-                    </ul>
-                  </div>
-                  <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long
-                    established fact that a reader</p>
-                </div>
 
-                <!-- Mission and Vision cards -->
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="service-one">
-                      <div class="card-style">
-                        <img class="shape-1" src="images/home-1/service/shape-01.png" alt="" />
-                        <div class="head">
-                          <div class="icon-2">
-                            <i class="flaticon-tech flaticon-tech-interaction-1"></i>
-                          </div>
-                          <div class="num">01</div>
-                        </div>
-                        <h3 class="title"> Mission</h3>
-                        <p class="details">Identify, invest in, and grow leading companies in Fintech, Logistics, Transport, and Agriculture through strategic guidance, financial strength, and advanced technology delivering sustained, high-impact value for all stakeholders. </p>
-                      </div>
-                    </div>
+                    <p>
+                      Headquartered in Ghana, Volta Core maintains a continental outlook, positioning itself as a driver of modern infrastructure and industry transformation. Our commitment is to deliver measurable impact, robust corporate governance, and innovative solutions that meet Africa’s evolving economic needs.
+                    </p>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="service-one">
-                      <div class="card-style">
-                        <img class="shape-1" src="images/home-1/service/shape-01.png" alt="" />
-                        <div class="head">
-                          <div class="icon-2">
-                            <i class="flaticon-tech flaticon-tech-interaction-1"></i>
-                          </div>
-                          <div class="num">02</div>
-                        </div>
-                        <h3 class="title"> Vision</h3>
-                        <p class="details">To be the premier engine of innovation and sustainable economic growth in Ghana, 
-                          recognized as the most valuable and indispensable holding company powering the transition to 
-                          a digitally-integrated African economy. </p>
-                      </div>
-                    </div>
-                  </div>
+                  <p>
+                    <a class="btn btn-link p-0" data-bs-toggle="collapse" href="#aboutFull" role="button" aria-expanded="false" aria-controls="aboutFull" id="aboutToggle">
+                      Read more
+                    </a>
+                  </p>
                 </div>
-                <!-- End Mission and vison card -->
               </div>
             </div>
+
+            <!-- Mission and Vision cards -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="service-one">
+                  <div class="card-style">
+                    <img class="shape-1" src="images/home-1/service/shape-01.png" alt="" />
+                    <div class="head">
+                      <div class="icon-2">
+                        <i class="flaticon-tech flaticon-tech-interaction-1"></i>
+                      </div>
+                      <div class="num">01</div>
+                    </div>
+                    <h3 class="title"> Mission</h3>
+                    <p class="details">Identify, invest in, and grow leading companies in Fintech, Logistics, Transport, and Agriculture through strategic guidance, financial strength, and advanced technology delivering sustained, high-impact value for all stakeholders. </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="service-one">
+                  <div class="card-style">
+                    <img class="shape-1" src="images/home-1/service/shape-01.png" alt="" />
+                    <div class="head">
+                      <div class="icon-2">
+                        <i class="flaticon-tech flaticon-tech-interaction-1"></i>
+                      </div>
+                      <div class="num">02</div>
+                    </div>
+                    <h3 class="title"> Vision</h3>
+                    <p class="details">To be the premier engine of innovation and sustainable economic growth in Ghana, 
+                      recognized as the most valuable and indispensable holding company powering the transition to 
+                      a digitally-integrated African economy. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- / Service Section Start  /-->
@@ -1118,6 +1126,20 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     form.reportValidity();
   }
 });
+</script>
+<script>
+  (function () {
+    var aboutToggle = document.getElementById('aboutToggle');
+    var aboutFull = document.getElementById('aboutFull');
+    if (!aboutToggle || !aboutFull) return;
+
+    aboutFull.addEventListener('shown.bs.collapse', function () {
+      aboutToggle.textContent = 'Read less';
+    });
+    aboutFull.addEventListener('hidden.bs.collapse', function () {
+      aboutToggle.textContent = 'Read more';
+    });
+  })();
 </script>
 </body>
 
