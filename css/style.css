@@ -21760,4 +21760,5 @@ Sidebar
 .footer-seven .footer-bottom {
   padding-top: 100px;
   background-color: var(--theme-color2);
-}
+}.company-overview .read-more-btn { color: blue; text-decoration: underline; }
+.company-overview .read-more-btn { color: blue; text-decoration: underline; font-weight: bold; }
