@@ -993,8 +993,8 @@
               <div class="content">
                 <p>© Copyright 2025 by Voltacore</p>
                 <ul class="list d-flex align-items-center">
-                  <li><a href="page-contact.html">Terms & Condition</a></li>
-                  <li><a href="page-contact.html">Privacy Policy</a></li>
+                  <li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Condition</a></li>
+                  <li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a></li>
                   <li><a href="page-contact.html">Contact us</a></li>
                 </ul>
               </div>
@@ -1033,6 +1033,198 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.form.min.js"></script>
   <script src="js/contact-form-script.js"></script>
+
+  <!-- Terms and Conditions Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Terms and Conditions for Volta Core</strong></p>
+          <p><strong>Last Updated: [Insert Date]</strong></p>
+          <p>Welcome to Volta Core. These Terms and Conditions ("Terms", "Terms of Service") govern your use of our website located at [website URL] (the "Site") and the services provided by Volta Core Group ("Volta Core", "we", "us", or "our"). By accessing or using our Site and services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Site or services.</p>
+
+          <h5>1. Acceptance of Terms</h5>
+          <p>By accessing and using the Site, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+
+          <h5>2. Description of Service</h5>
+          <p>Volta Core is a Ghanaian-led holding company providing strategic leadership, capital, and technological expertise to subsidiaries in fintech, logistics, supply chain, and agriTech sectors. Our Site provides information about our company, investment opportunities, and related services.</p>
+
+          <h5>3. User Accounts</h5>
+          <p>To access certain features of our Site, you may be required to create an account. You are responsible for maintaining the confidentiality of your account and password. You agree to accept responsibility for all activities that occur under your account or password.</p>
+
+          <h5>4. Use License</h5>
+          <p>Permission is granted to temporarily download one copy of the materials on Volta Core's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+          <ul>
+            <li>Modify or copy the materials;</li>
+            <li>Use the materials for any commercial purpose or for any public display;</li>
+            <li>Attempt to decompile or reverse engineer any software contained on the website;</li>
+            <li>Remove any copyright or other proprietary notations from the materials.</li>
+          </ul>
+
+          <h5>5. Prohibited Uses</h5>
+          <p>You may not use our Site or services:</p>
+          <ul>
+            <li>For any unlawful purpose or to solicit others to perform unlawful acts;</li>
+            <li>To violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances;</li>
+            <li>To infringe upon or violate our intellectual property rights or the intellectual property rights of others;</li>
+            <li>To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate;</li>
+            <li>To submit false or misleading information;</li>
+            <li>To upload or transmit viruses or any other type of malicious code;</li>
+            <li>To spam, phish, pharm, pretext, spider, crawl, or scrape;</li>
+            <li>For any obscene or immoral purpose.</li>
+          </ul>
+
+          <h5>6. Investment Risks and Disclaimers</h5>
+          <p>Information provided on our Site regarding investment opportunities is for informational purposes only and does not constitute investment advice. All investments involve risk, including the potential loss of principal. Past performance does not guarantee future results. We strongly recommend consulting with qualified financial advisors before making any investment decisions.</p>
+
+          <h5>7. Content Ownership and Intellectual Property Rights</h5>
+          <p>The Site and its original content, features, and functionality are and will remain the exclusive property of Volta Core and its licensors. The Site is protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.</p>
+
+          <h5>8. Accuracy of Materials</h5>
+          <p>The materials appearing on our Site could include technical, typographical, or photographic errors. Volta Core does not warrant that any of the materials on its website are accurate, complete, or current. Volta Core may make changes to the materials contained on its website at any time without notice.</p>
+
+          <h5>9. Links to Third-Party Websites</h5>
+          <p>Our Site may contain links to third-party websites or services that are not owned or controlled by Volta Core. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party websites or services.</p>
+
+          <h5>10. Termination</h5>
+          <p>We may terminate or suspend your account and bar access to the Site immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+
+          <h5>11. Limitation of Liability</h5>
+          <p>In no event shall Volta Core, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the Site or services.</p>
+
+          <h5>12. Indemnification</h5>
+          <p>You agree to defend, indemnify, and hold harmless Volta Core and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Site or services, by you or any person using your account and password; b) a breach of these Terms, or c) content posted on the Site.</p>
+
+          <h5>13. Governing Law</h5>
+          <p>These Terms shall be interpreted and governed by the laws of the Republic of Ghana, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+
+          <h5>14. Changes to Terms</h5>
+          <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+
+          <h5>15. Contact Information</h5>
+          <p>If you have any questions about these Terms, please contact us:</p>
+          <p><strong>Volta Core Headquarters</strong><br>
+          Atomic Hills Estate, Accra<br>
+          Ghana<br>
+          Email: hello@voltacoregroup.com<br>
+          Phone: 0209140308</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="privacyPolicyModalLabel">Privacy Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Privacy Policy for Volta Core</strong></p>
+          <p><strong>Last Updated: [Insert Date]</strong></p>
+          <p>At Volta Core your privacy is important to us. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you visit our website or interact with our services. By using our website, you consent to the practices described in this policy.</p>
+
+          <h5>1. Information We Collect</h5>
+          <h6>a. Personal Information</h6>
+          <p>We may collect personal details you voluntarily provide, including:</p>
+          <ul>
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>Company or organization</li>
+            <li>Any information submitted through forms or inquiries</li>
+          </ul>
+
+          <h6>b. Automatically Collected Information</h6>
+          <p>When you visit our website, we may automatically collect:</p>
+          <ul>
+            <li>IP address</li>
+            <li>Browser type and version</li>
+            <li>Device information</li>
+            <li>Usage data (pages visited, time spent, interactions)</li>
+            <li>Cookies and similar tracking technologies</li>
+          </ul>
+
+          <h6>c. Cookies and Tracking Technologies</h6>
+          <p>We use cookies to enhance user experience, analyze performance, and improve our services. You can manage cookie preferences through your browser settings.</p>
+
+          <h5>2. How We Use Your Information</h5>
+          <p>We use collected information to:</p>
+          <ul>
+            <li>Provide and improve our website and services</li>
+            <li>Respond to inquiries or customer support requests</li>
+            <li>Analyze website usage and optimize user experience</li>
+            <li>Communicate updates, marketing content, and announcements (where applicable)</li>
+            <li>Ensure website security and prevent fraud</li>
+          </ul>
+
+          <h5>3. How We Share Your Information</h5>
+          <p>We do not sell your personal information. We may share information with:</p>
+          <ul>
+            <li>Service providers assisting in website operations, analytics, or communication</li>
+            <li>Legal authorities when required by law or to protect our rights</li>
+            <li>Affiliated subsidiaries within the Volta Core group as needed to deliver services</li>
+          </ul>
+          <p>All third parties are obligated to maintain confidentiality and adhere to data protection standards.</p>
+
+          <h5>4. Data Security</h5>
+          <p>We implement appropriate technical and organizational measures to protect your data from unauthorized access, misuse, alteration, or loss.</p>
+          <p>However, no method of electronic transmission or storage is 100% secure. We strive to protect your information but cannot guarantee absolute security.</p>
+
+          <h5>5. Data Retention</h5>
+          <p>We retain personal information only as long as necessary to:</p>
+          <ul>
+            <li>Fulfill the purposes outlined in this policy</li>
+            <li>Comply with legal and regulatory requirements</li>
+            <li>Resolve disputes and maintain business records</li>
+          </ul>
+
+          <h5>6. Your Rights</h5>
+          <p>Depending on your jurisdiction, you may have the right to:</p>
+          <ul>
+            <li>Access the personal data we hold</li>
+            <li>Request corrections or updates</li>
+            <li>Request deletion of your data</li>
+            <li>Withdraw consent for processing</li>
+            <li>Opt out of marketing communications</li>
+          </ul>
+          <p>To exercise any of these rights, contact us using the information below.</p>
+
+          <h5>7. Links to Third-Party Websites</h5>
+          <p>Our website may contain links to external sites. We are not responsible for the privacy practices or content of third-party websites.</p>
+
+          <h5>8. Children's Privacy</h5>
+          <p>Our website is not intended for individuals under 18 years of age. We do not knowingly collect personal information from children.</p>
+
+          <h5>9. International Data Transfers</h5>
+          <p>If data is transferred outside your country, we ensure it is protected through lawful safeguards and compliant frameworks.</p>
+
+          <h5>10. Changes to This Privacy Policy</h5>
+          <p>We may update this Privacy Policy from time to time. The "Last Updated" date will reflect the most recent changes. Continued use of our website indicates acceptance of the updated policy.</p>
+
+          <h5>11. Contact Us</h5>
+          <p>For questions, concerns, or requests related to this Privacy Policy, contact us at:</p>
+          <p><strong>Volta Core Headquarters</strong><br>
+          Atomic Hills Estate, Accra<br>
+          Ghana<br>
+          Email: hello@voltacoregroup.com<br>
+          Phone: 0209140308</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
     /* --------------------------------------------------------------
        1. FORM VALIDATION + AJAX SUBMISSION TO FORMSPREE

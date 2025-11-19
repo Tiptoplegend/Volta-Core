@@ -1,12 +1,6 @@
-# TODO: Add Company Overview Content with Read More/Less Functionality
+# TODO: Integrate Privacy Policy Modal
 
-## Tasks to Complete
-
-- [x] Edit Index.html to insert the company overview content before the Mission and Vision cards in the "Our Core Vision & Mission" section
-- [x] Add HTML structure for expandable content with "Read More" button
-- [x] Add CSS styles in style.css for the expandable content and button
-- [x] Add JavaScript in contact-form-script.js to toggle read more/read less functionality
-- [x] Test the functionality in the browser to ensure it works correctly
-- [x] Verify responsive design on different screen sizes
-- [x] Format the focus areas content with proper line breaks and bold styling
-- [x] Add enhanced button styling with focus and active states
+- [ ] Add Bootstrap modal HTML structure containing the full Privacy Policy content before the closing </body> tag in Index.html.
+- [ ] Update the Privacy Policy link in the footer to trigger the modal using data-bs-toggle and data-bs-target attributes.
+- [ ] Ensure the modal is styled for readability with proper headings, paragraphs, and scrolling if needed.
+- [ ] Verify the modal opens correctly when clicked (manual check after implementation).
