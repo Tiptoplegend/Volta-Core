@@ -22,3 +22,22 @@
     });
   })(jQuery);
   */
+
+  // Read More/Read Less Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    const moreText = document.querySelector('.more-text');
+
+    if (readMoreBtn && moreText) {
+      moreText.style.display = 'none'; // Initially hide the more text on page load
+      readMoreBtn.addEventListener('click', function() {
+        if (moreText.style.display === 'none') {
+          moreText.style.display = 'inline';
+          readMoreBtn.textContent = 'Read Less';
+        } else {
+          moreText.style.display = 'none';
+          readMoreBtn.textContent = 'Read More';
+        }
+      });
+    }
+  });
